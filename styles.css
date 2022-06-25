@@ -14,5 +14,83 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     padding: 1rem;
+}
+
+.input-group {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+/* Effect 1 */
+
+.effect-1 {
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.effect-1 + .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #4caf50;
+    transition: width 0.5s ease-in-out;
+}
+
+.effect-1:focus + .border {
+    width: 100%;
+}
+
+/* Effect 2 */
+
+.effect-2 {
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.effect-2 + .border {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #4caf50;
+    transition: width 0.5s ease-in-out;
+}
+
+.effect-2:focus + .border {
+    width: 100%;
+}
+
+/* Effect 3 */
+
+.effect-3 {
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.effect-3 + .border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 100%;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.6s;
+}
+
+.effect-3:focus + .border {
+    transform: translateX(-50%) scale(1);
 }
