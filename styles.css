@@ -123,3 +123,32 @@ input {
     background-color: #fff;
     color: #4caf50;
 }
+
+/* Effect 5 */
+
+.effect-5 {
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.effect-5 + label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #ccc;
+    transition: 0.4s;
+}
+
+.effect-5:focus {
+    border-color: #4caf50;
+}
+
+.effect-5:focus + label,
+.effect-5:not(:placeholder-shown) + label {
+    top: 0;
+    transition: 0.3s;
+    background-color: #fff;
+    color: #4caf50;
+}
+
